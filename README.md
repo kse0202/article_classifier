@@ -1,5 +1,5 @@
 # article_classifier
-article crawling and classifying with DNN
+
 네이버 뉴스에서 '정치', '경제' 부분 기사를 크롤링 후 분류하는 모델을 DNN으로 구현했습니다.  
 
 1. `selenium`, `BeautifulSoup` 을 이용하여 기사를 수집했습니다.
