@@ -124,7 +124,7 @@ array([[0., 1., 1., ..., 0., 0., 0.],
        [0., 1., 1., ..., 0., 0., 0.],
        [0., 1., 1., ..., 0., 0., 0.],
        [0., 1., 1., ..., 0., 1., 0.]])
-       ```
+```
        
 ### 4. DNN 모델링
 
@@ -157,7 +157,9 @@ history = model.fit(X_train,
                     shuffle= True, # 데이터 셋의 기사들을 섞어준다. 
                     batch_size=15,
                     validation_split=0.25)
-                    ```
+```
+
+plot을 이용하여 history확인
 
 ```
 import matplotlib.pyplot as plt
@@ -221,7 +223,7 @@ for i in range(len(pred)):
     
 print('정답 갯수 : {}, 총 갯수 : {} '.format(count, len(pred)))
                
-    ```
+```
 
 
 ## 결론 
