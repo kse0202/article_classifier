@@ -129,7 +129,7 @@ array([[0., 1., 1., ..., 0., 0., 0.],
 ### 4. DNN 모델링
 
 ```
-# 3.4 텐서플로 2.0 버전 선택
+
 try:
     # %tensorflow_version only exists in Colab.
     %tensorflow_version 2.x
@@ -141,12 +141,9 @@ import os
 from keras import models
 from keras import layers
 
-# from keras import optimizers  
-# optimizers.RMSprop(lr=0.001)
-
 model = models.Sequential()
-## 주요 단어 500개로 one-hot encoding -> input_shape 수 500개
-model.add(layers.Dense(16, activation='relu', input_shape=(500,)) )
+     
+model.add(layers.Dense(16, activation='relu', input_shape=(500,)) )  # 주요 단어 500개로 one-hot encoding -> input_shape 수 500개
 model.add(layers.Dense(16, activation='relu'))
 model.add(layers.Dense(1, activation='sigmoid' )) # '정치' '경제' 이진분류 -> sigmoid 사용. 
 
@@ -160,7 +157,7 @@ history = model.fit(X_train,
                     shuffle= True, # 데이터 셋의 기사들을 섞어준다. 
                     batch_size=15,
                     validation_split=0.25)
-```
+                    ```
 
 ```
 import matplotlib.pyplot as plt
@@ -183,6 +180,7 @@ plt.legend()
 
 plt.show()
 ```
+![ex_screenshot](./img/plot1.png)  
 
 ```
 plt.clf()   # 그래프를 초기화합니다
@@ -198,6 +196,7 @@ plt.legend()
 
 plt.show()
 ```
+![ex_screenshot](./img/plot2.png)  
 
 ### 5. test 데이터셋을 이용하여 평가
 
